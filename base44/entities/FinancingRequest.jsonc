@@ -1,0 +1,475 @@
+{
+  "name": "FinancingRequest",
+  "type": "object",
+  "properties": {
+    "pratica_id": {
+      "type": "string",
+      "title": "ID Pratica"
+    },
+    "numero_preventivo": {
+      "type": "string",
+      "title": "Numero Preventivo"
+    },
+    "numero_polizza": {
+      "type": "string",
+      "title": "Numero Polizza"
+    },
+    "intermediario": {
+      "type": "string",
+      "title": "Intermediario / Subagente"
+    },
+    "prodotto_compagnia": {
+      "type": "string",
+      "title": "Prodotto / Compagnia"
+    },
+    "importo_finanziare": {
+      "type": "number",
+      "title": "Importo da Finanziare"
+    },
+    "premio_polizza": {
+      "type": "number",
+      "title": "Premio Polizza"
+    },
+    "stato_pratica": {
+      "type": "string",
+      "title": "Stato Pratica",
+      "enum": [
+        "bozza",
+        "incompleta",
+        "completata",
+        "inviata"
+      ],
+      "default": "bozza"
+    },
+    "data_apertura": {
+      "type": "string",
+      "title": "Data Apertura Richiesta"
+    },
+    "current_step": {
+      "type": "number",
+      "title": "Step Corrente",
+      "default": 1
+    },
+    "completion_percentage": {
+      "type": "number",
+      "title": "Percentuale Completamento",
+      "default": 0
+    },
+    "tipo_soggetto": {
+      "type": "string",
+      "title": "Tipo Soggetto",
+      "enum": [
+        "richiedente",
+        "coobbligato"
+      ]
+    },
+    "ha_coobbligato": {
+      "type": "boolean",
+      "title": "Ha Coobbligato",
+      "default": false
+    },
+    "grado_parentela": {
+      "type": "string",
+      "title": "Grado Parentela Coobbligato",
+      "enum": [
+        "Coniuge",
+        "Convivente",
+        "Altra Parentela",
+        "Genitore",
+        "Figlio/a",
+        "Nessuna Parentela"
+      ]
+    },
+    "cognome": {
+      "type": "string",
+      "title": "Cognome"
+    },
+    "nome": {
+      "type": "string",
+      "title": "Nome"
+    },
+    "data_nascita": {
+      "type": "string",
+      "title": "Data di Nascita"
+    },
+    "luogo_nascita": {
+      "type": "string",
+      "title": "Luogo di Nascita"
+    },
+    "codice_fiscale": {
+      "type": "string",
+      "title": "Codice Fiscale"
+    },
+    "sesso": {
+      "type": "string",
+      "title": "Sesso",
+      "enum": [
+        "Maschio",
+        "Femmina"
+      ]
+    },
+    "stato_civile": {
+      "type": "string",
+      "title": "Stato Civile",
+      "enum": [
+        "Celibe / Nubile",
+        "Coniugato in Comunione di Beni",
+        "Coniugato in Separazione di Beni",
+        "Convivente",
+        "Separato/a",
+        "Divorziato/a",
+        "Vedovo/a"
+      ]
+    },
+    "residenza_indirizzo": {
+      "type": "string",
+      "title": "Indirizzo Residenza"
+    },
+    "residenza_civico": {
+      "type": "string",
+      "title": "Numero Civico"
+    },
+    "residenza_cap": {
+      "type": "string",
+      "title": "CAP"
+    },
+    "residenza_localita": {
+      "type": "string",
+      "title": "Localit\u00e0"
+    },
+    "residenza_provincia": {
+      "type": "string",
+      "title": "Provincia"
+    },
+    "tipo_abitazione": {
+      "type": "string",
+      "title": "Tipo Abitazione",
+      "enum": [
+        "Propriet\u00e0",
+        "Propriet\u00e0 con Mutuo",
+        "Affitto",
+        "Presso Parenti",
+        "Presso Terzi"
+      ]
+    },
+    "cambio_residenza_recente": {
+      "type": "boolean",
+      "title": "Cambio Residenza Ultimi 3 Anni",
+      "default": false
+    },
+    "prev_indirizzo": {
+      "type": "string",
+      "title": "Indirizzo Precedente"
+    },
+    "prev_civico": {
+      "type": "string",
+      "title": "Civico Precedente"
+    },
+    "prev_cap": {
+      "type": "string",
+      "title": "CAP Precedente"
+    },
+    "prev_localita": {
+      "type": "string",
+      "title": "Localit\u00e0 Precedente"
+    },
+    "prev_provincia": {
+      "type": "string",
+      "title": "Provincia Precedente"
+    },
+    "domicilio_diverso": {
+      "type": "boolean",
+      "title": "Domicilio Diverso dalla Residenza",
+      "default": false
+    },
+    "domicilio_indirizzo": {
+      "type": "string",
+      "title": "Indirizzo Domicilio"
+    },
+    "domicilio_civico": {
+      "type": "string",
+      "title": "Civico Domicilio"
+    },
+    "domicilio_cap": {
+      "type": "string",
+      "title": "CAP Domicilio"
+    },
+    "domicilio_localita": {
+      "type": "string",
+      "title": "Localit\u00e0 Domicilio"
+    },
+    "domicilio_provincia": {
+      "type": "string",
+      "title": "Provincia Domicilio"
+    },
+    "telefono_fisso": {
+      "type": "string",
+      "title": "Telefono Fisso"
+    },
+    "cellulare": {
+      "type": "string",
+      "title": "Cellulare"
+    },
+    "altro_recapito": {
+      "type": "string",
+      "title": "Altro Recapito"
+    },
+    "email": {
+      "type": "string",
+      "title": "Indirizzo Email"
+    },
+    "tipo_documento": {
+      "type": "string",
+      "title": "Tipo Documento",
+      "enum": [
+        "Carta d'Identit\u00e0",
+        "Patente",
+        "Passaporto",
+        "Tessera Ministeriale"
+      ]
+    },
+    "numero_documento": {
+      "type": "string",
+      "title": "Numero Documento"
+    },
+    "data_rilascio": {
+      "type": "string",
+      "title": "Data Rilascio"
+    },
+    "localita_rilascio": {
+      "type": "string",
+      "title": "Localit\u00e0 Rilascio"
+    },
+    "ente_rilascio": {
+      "type": "string",
+      "title": "Ente Rilascio",
+      "enum": [
+        "Comune",
+        "Prefettura / Motorizzazione",
+        "Questura",
+        "Ministero"
+      ]
+    },
+    "documento_fronte_url": {
+      "type": "string",
+      "title": "Documento Fronte URL"
+    },
+    "documento_retro_url": {
+      "type": "string",
+      "title": "Documento Retro URL"
+    },
+    "cittadinanza": {
+      "type": "string",
+      "title": "Cittadinanza",
+      "enum": [
+        "Italiana",
+        "Altra"
+      ]
+    },
+    "cittadinanza_altra": {
+      "type": "string",
+      "title": "Altra Cittadinanza"
+    },
+    "scadenza_permesso_soggiorno": {
+      "type": "string",
+      "title": "Scadenza Permesso di Soggiorno"
+    },
+    "soggiorno_dal": {
+      "type": "string",
+      "title": "Soggiorno dal"
+    },
+    "attivita_lavorativa": {
+      "type": "string",
+      "title": "Attivit\u00e0 Lavorativa",
+      "enum": [
+        "Dipendente",
+        "Lavoratore Autonomo",
+        "Pensionato",
+        "Casalinga",
+        "Studente",
+        "Disoccupato",
+        "Occupazione Saltuaria"
+      ]
+    },
+    "settore_attivita": {
+      "type": "string",
+      "title": "Settore Attivit\u00e0",
+      "enum": [
+        "Industria",
+        "Commercio",
+        "Credito / Assicurazioni",
+        "Edilizia",
+        "Agricoltura",
+        "Stato",
+        "Trasporti",
+        "Servizi / Altro"
+      ]
+    },
+    "occupazione_dal": {
+      "type": "string",
+      "title": "Occupazione Dal"
+    },
+    "tipo_assunzione": {
+      "type": "string",
+      "title": "Tipo Assunzione",
+      "enum": [
+        "Tempo Indeterminato",
+        "Tempo Determinato"
+      ]
+    },
+    "datore_ragione_sociale": {
+      "type": "string",
+      "title": "Ragione Sociale"
+    },
+    "datore_indirizzo": {
+      "type": "string",
+      "title": "Indirizzo Datore"
+    },
+    "datore_civico": {
+      "type": "string",
+      "title": "Civico Datore"
+    },
+    "datore_cap": {
+      "type": "string",
+      "title": "CAP Datore"
+    },
+    "datore_localita": {
+      "type": "string",
+      "title": "Localit\u00e0 Datore"
+    },
+    "datore_provincia": {
+      "type": "string",
+      "title": "Provincia Datore"
+    },
+    "datore_telefono": {
+      "type": "string",
+      "title": "Telefono Datore"
+    },
+    "tipo_reddito": {
+      "type": "string",
+      "title": "Tipo Reddito",
+      "enum": [
+        "Netto",
+        "Lordo"
+      ]
+    },
+    "numero_mensilita": {
+      "type": "number",
+      "title": "Numero Mensilit\u00e0"
+    },
+    "reddito": {
+      "type": "number",
+      "title": "Reddito"
+    },
+    "numero_familiari": {
+      "type": "number",
+      "title": "Numero Familiari"
+    },
+    "familiari_con_reddito": {
+      "type": "number",
+      "title": "Familiari con Reddito"
+    },
+    "rapporto_banca_posta": {
+      "type": "string",
+      "title": "Rapporti Banca/Posta",
+      "enum": [
+        "Banca",
+        "Posta",
+        "Nessuno"
+      ]
+    },
+    "anzianita_banca": {
+      "type": "string",
+      "title": "Anzianit\u00e0 Banca/Posta"
+    },
+    "carta_credito": {
+      "type": "string",
+      "title": "Carta di Credito",
+      "enum": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Bancomat",
+        "Nessuna Carta"
+      ]
+    },
+    "modalita_pagamento": {
+      "type": "string",
+      "title": "Modalit\u00e0 Pagamento",
+      "enum": [
+        "SDD (Addebito su Conto Corrente)",
+        "Bollettino Postale"
+      ]
+    },
+    "codice_iban": {
+      "type": "string",
+      "title": "Codice IBAN"
+    },
+    "intestatario_conto": {
+      "type": "string",
+      "title": "Intestatario Conto",
+      "enum": [
+        "Richiedente",
+        "Coobbligato"
+      ]
+    },
+    "consenso_privacy": {
+      "type": "boolean",
+      "title": "Consenso Privacy",
+      "default": false
+    },
+    "consenso_veridicita": {
+      "type": "boolean",
+      "title": "Conferma Veridicit\u00e0",
+      "default": false
+    },
+    "consenso_trattamento": {
+      "type": "boolean",
+      "title": "Autorizzazione Trattamento",
+      "default": false
+    },
+    "data_conferma": {
+      "type": "string",
+      "title": "Data e Ora Conferma"
+    },
+    "fields_metadata": {
+      "type": "object",
+      "title": "Metadati Campi",
+      "additionalProperties": true
+    },
+    "campi_mancanti": {
+      "type": "array",
+      "title": "Campi Mancanti",
+      "items": {
+        "type": "string"
+      }
+    },
+    "log_importati": {
+      "type": "array",
+      "title": "Log Campi Importati",
+      "items": {
+        "type": "string"
+      }
+    },
+    "log_modificati": {
+      "type": "array",
+      "title": "Log Campi Modificati",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_saved": {
+      "type": "string",
+      "title": "Ultimo Salvataggio"
+    },
+    "coobbligato_data": {
+      "type": "object",
+      "title": "Dati Coobbligato",
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "pratica_id",
+    "stato_pratica"
+  ]
+}

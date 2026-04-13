@@ -1,0 +1,116 @@
+{
+  "name": "CustomerLink",
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string",
+      "title": "Token Sicuro"
+    },
+    "pratica_id": {
+      "type": "string",
+      "title": "ID Record Pratica"
+    },
+    "financing_request_id": {
+      "type": "string",
+      "title": "FinancingRequest ID"
+    },
+    "status": {
+      "type": "string",
+      "title": "Stato Link",
+      "enum": [
+        "generated",
+        "sent",
+        "opened",
+        "in_progress",
+        "submitted",
+        "expired",
+        "revoked"
+      ],
+      "default": "generated"
+    },
+    "expires_at": {
+      "type": "string",
+      "title": "Scadenza"
+    },
+    "expiration_days": {
+      "type": "number",
+      "title": "Giorni di Validit\u00e0",
+      "default": 7
+    },
+    "generated_at": {
+      "type": "string",
+      "title": "Generato il"
+    },
+    "sent_at": {
+      "type": "string",
+      "title": "Inviato il"
+    },
+    "first_opened_at": {
+      "type": "string",
+      "title": "Prima Apertura"
+    },
+    "last_activity_at": {
+      "type": "string",
+      "title": "Ultima Attivit\u00e0"
+    },
+    "submitted_at": {
+      "type": "string",
+      "title": "Inviato dal Cliente il"
+    },
+    "open_count": {
+      "type": "number",
+      "title": "Numero Aperture",
+      "default": 0
+    },
+    "completion_percentage": {
+      "type": "number",
+      "title": "Completamento Cliente",
+      "default": 0
+    },
+    "send_method": {
+      "type": "string",
+      "title": "Metodo Invio",
+      "enum": [
+        "email",
+        "sms",
+        "whatsapp",
+        "manuale"
+      ]
+    },
+    "customer_email": {
+      "type": "string",
+      "title": "Email Cliente"
+    },
+    "customer_name": {
+      "type": "string",
+      "title": "Nome Cliente"
+    },
+    "consent_log": {
+      "type": "object",
+      "title": "Log Consensi",
+      "additionalProperties": true
+    },
+    "access_log": {
+      "type": "array",
+      "title": "Log Accessi",
+      "items": {
+        "type": "object",
+        "additionalProperties": true
+      }
+    },
+    "regeneration_count": {
+      "type": "number",
+      "title": "Numero Rigenerazioni",
+      "default": 0
+    },
+    "operator_notes": {
+      "type": "string",
+      "title": "Note Operatore"
+    }
+  },
+  "required": [
+    "token",
+    "pratica_id",
+    "financing_request_id"
+  ]
+}
